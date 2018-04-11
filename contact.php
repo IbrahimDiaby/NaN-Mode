@@ -47,23 +47,51 @@
 </head>
 <body>
     <div class="formcontain">
-        <form action="" method="POST">
+        <form action="contactconfirm.php" method="POST">
 
-            <label for"mail">
+            <div class="page">
+                <a class="btn btn-danger" id="accueil" href="loginsuccess.php">Accueil</a>
+            </div>
+            
+            <label for="mailexpediteur">
 
             <?php
                 $db = new PDO("mysql:host=localhost;dbname=Mode", 'root', 'root');
-                $search=$db->query("SELECT Mail FROM Client WHERE Admin = '$proprio' ");
+                $see=$db->query("SELECT * FROM Client WHERE Admin = '$_SESSION[username]' ");
+                $admin = $see->fetch();
+                $adminmail = $admin['Mail'];
+                $adminname = $admin['Admin'];
+            ?>
+                Adresse Mail De @ <p class="btn btn-primary"><?php echo $_SESSION['username']  ?></p> : <br />
+                <!-- disabled -->
+                <input type="email" name="mailexpediteur" id="mailexpediteur" value="<?php echo $adminmail ?>" />
+            </label><br />
+
+            <label for="maildestinateur">
+
+            <?php
+                $db = new PDO("mysql:host=localhost;dbname=Mode", 'root', 'root');
+                $search=$db->query("SELECT * FROM Client WHERE Admin = '$proprio' ");
                 $vendeur = $search->fetch();
                 $mail = $vendeur['Mail'];
+                $name = $vendeur['Admin'];
             ?>
-                Adresse Mail : <br />
-                <input type="email" name="mail" id="mail" value="<?php echo $mail ?>" />
+                Adresse Mail De @ <p class="btn btn-success"><?php echo $name ?></p> : <br />
+                <!-- disabled -->
+                <input type="email" name="maildestinateur" id="maildestinateur" value="<?php echo $mail ?>"  />
             </label><br />
+
+            <!-- <label for="namedestinateur"> -->
+                <input type="hidden" name="namedestinateur" id="namedestinateur" value="<?php echo $name ?>"  />
+            <!-- </label><br /> -->
+
+            <!-- <label for="nameexpediteur"> -->
+                <input type="hidden" name="nameexpediteur" id="nameexpediteur" value="<?php echo $adminname ?>"  />
+            <!-- </label><br /> -->
             
             <!-- cols="30" rows="10" -->
 
-            <label for"message">
+            <label for="message">
                 Message : <br />
                 <textarea name="message" id="message" ></textarea>
             </label><br />
