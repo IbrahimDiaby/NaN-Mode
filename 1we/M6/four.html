@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uploading</title>
+    <style>
+        .container{
+            margin: 15px auto;
+            width: 1024px;
+        }
+        #imgpreview{
+            margin: 15px;
+        }
+        .imgClass{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" methode="post" enctype="multipart/form-data">
+            <input type="file" name="imgupload" id="imgupload" multiple="multiple">
+        </form>
+        <div id="imgpreview"></div>
+    </div>
+
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#imgupload").on("change", function(){
+               
+               var imgCount = $(this)[0].files.length;
+               var imgPath = $(this)[0].value;
+               var imgExt = imgPath.substring(imgPath.lastIndexOf(".")+1).toLowerCase();
+               var imgPreview = $("#imgpreview");
+               imgPreview.empty();
+               if(imgExt == "gif" || imgExt == "png" || imgExt == "jpg" || imgExt == "jpeg" || imgExt == "bmp"){
+                   if(typeof(FileReader) != "undefined"){
+                       for (var i=0; i< imgCount; i++){
+                           var reader = new FileReader();
+                           reader.onload = function(e){
+                               $("<img />", {
+                                   "src": e.target.result,
+                                   "width": "150",
+                                   "class": "imgClass"
+                               }).appendTo(imgPreview);
+                           }
+                           imgPreview.show();
+                           reader.readAsDataURL($(this)[0].files[i]);
+                        }
+                   }else{
+                       imgPreview.html("Browser ini tidak mfdfkdj FileReader");
+                   }
+               }else{
+                imgPreview.html("File haras format ganba");
+               }
+           });
+        });
+    </script>
+</body>
+</html>

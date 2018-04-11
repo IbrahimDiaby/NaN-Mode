@@ -1,0 +1,88 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 1000px;
+    font-size: initial;
+}
+
+/* section */
+
+section{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.info{
+    text-align: center;
+}
+
+.left{
+    margin: 0px;
+    padding: 0px;
+    width: 30%;
+    height: 100%;
+}
+
+.imgcontain{
+    margin: 320px auto 10px auto;
+    padding: 0px;
+    width: 90%;
+    height: 25%;
+    background-color: rgba(000, 000, 000, 0.6);
+}
+
+.prix{
+    margin: 0px auto;
+    padding: 0px;
+    width: 90%;
+    height: 50px;
+    color: #fff;
+}
+
+.prix span{
+    margin: 0px;
+    padding: 13px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+table tr{
+    padding: 0px;
+}
+
+table p{
+    padding: 10px 40px;
+}
+
+table td{
+    padding: 0px;
+}
+
+table a{
+    width: 100%;
+    height: 40px;
+}
+
+.right{
+    margin: 0px;
+    padding: 0px;
+    width: 70%;
+    height: 100%;
+}
+
+.infocontain{
+    margin: 200px auto;
+    padding: 0px;
+    width: 90%;
+    height: 65%;
+}
