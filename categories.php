@@ -58,7 +58,7 @@
                         <p><th>Commune</th></p>
                         <p><th>Modifier</th></p>
                         <p><th>Supprimer</th></p>
-                        <p><th>Contactez-le</th></p>
+                        <p><th>Envoyez un mail</th></p>
                     </tr>
                 </thead>
 
@@ -77,7 +77,7 @@
                         <td><p><?php echo $liste['Commune'] ?></p></td>
                         <td><p><a href="update.php?ID=<?php echo $liste['ID'] ?>"> Modifier </a></p></td>
                         <td><p><a href="delete.php?ID=<?php echo $liste['ID'] ?>"> Supprimer </a></p></td>
-                        <td><p><?php echo 'contact' ?></p></td>
+                        <td><p><a href="contact.php?ID=<?php echo $liste['ID'] ?>"> Envoyez un mail </a></p></td>
                     </tr>
                         
                     <?php

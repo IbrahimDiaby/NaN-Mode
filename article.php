@@ -74,7 +74,7 @@
                         <td><p><?php echo $liste['Ville'] ?></p></td>
                         <td><p><?php echo $liste['Commune'] ?></p></td>
                         <td><p><a href="prod.php?ID=<?php echo $liste['ID'] ?>"> Voir </a></p></td>
-                        <td><p><?php echo 'Envoyez' ?></p></td>
+                        <td><p><a href="contact.php?ID=<?php echo $liste['ID'] ?>"> Envoyez un mail </a></p></td>
                     </tr>
                         
                     <?php

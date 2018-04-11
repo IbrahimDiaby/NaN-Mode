@@ -51,7 +51,7 @@
 <body>
     <header>
         <div id="CCI"><img src="CCI.png" alt="" title="Central CI" id="CCILogo" /></div>
-        <div id="CCItext"><h3>Central CI</h3></div>
+        <div id="CCItext"><h3><a href="loginsuccess.php"> Central CI</a></h3></div>
         <div id="searchcontain">
                 <!-- <input type="text" name="search" id="search" title="Recherche" placeholder="Recherche" /> -->
         </div>
