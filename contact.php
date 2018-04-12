@@ -51,7 +51,6 @@
 
             <div class="page">
                 <a class="btn btn-danger" id="accueil" href="loginsuccess.php">Accueil</a>
-                
             </div>
             
             <?php

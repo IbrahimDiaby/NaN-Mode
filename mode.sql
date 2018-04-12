@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 11 avr. 2018 à 23:54
+-- Généré le :  jeu. 12 avr. 2018 à 03:38
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -32,13 +32,6 @@ CREATE TABLE `Articles` (
   `Commune` varchar(100) NOT NULL,
   `NbreArticleProprio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `Articles`
---
-
-INSERT INTO `Articles` (`ID`, `Image`, `Article`, `Categories`, `Prix`, `Proprietaires`, `Numero`, `Ville`, `Commune`, `NbreArticleProprio`) VALUES
-(1, 'Master ID.png', 'Vetements', 'Vetements', 1500, 'MasterID', 89549209, 'Abidjan', 'Adjamé', 0);
 
 -- --------------------------------------------------------
 
@@ -94,8 +87,7 @@ CREATE TABLE `Client` (
 --
 
 INSERT INTO `Client` (`ID`, `Avatar`, `Admin`, `Password`, `Connected`, `Nom`, `Prenom`, `Anniversaire`, `Mail`, `Sexe`, `Numero`, `Ville`, `Commune`, `Premium`) VALUES
-(1, 'MasterID.png', 'MasterID', '#MASTERIDid2018', 0, 'Diaby', 'Ibrahim', '3 Juillet 1999', 'ibrahim.diaby@uvci.edu.ci', 'Homme', 89549209, 'Abidjan', 'Adjamé', 0),
-(4, 'Code Room.png', 'aaa', 'njknjknjknk', 1, 'bhb', 'bjbkjkbkj', '7 Aout 1960', 'jkkkjk@djbhjnk.com', 'Homme', 34567, 'xfcvhjk', 'fcghvjk', 0);
+(1, 'MasterID.png', 'MasterID', '#MASTERIDid2018', 0, 'Diaby', 'Ibrahim', '3 Juillet 1999', 'ibrahim.diaby@uvci.edu.ci', 'Homme', 89549209, 'Abidjan', 'Adjamé', 0);
 
 -- --------------------------------------------------------
 
@@ -185,7 +177,7 @@ ALTER TABLE `Vendu`
 -- AUTO_INCREMENT pour la table `Articles`
 --
 ALTER TABLE `Articles`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `Categories`
@@ -197,13 +189,13 @@ ALTER TABLE `Categories`
 -- AUTO_INCREMENT pour la table `Client`
 --
 ALTER TABLE `Client`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `Messages`
 --
 ALTER TABLE `Messages`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `Pub`

@@ -47,7 +47,7 @@
                 ?>
                     <div class="contain">
                         <div class="expediteur">
-                            <p class="nameexpediteur"><?php echo $liste['NameExpediteur']; ?></p>
+                            <p class="nameexpediteur"><?php echo $liste['NameExpediteur']; ?> <?php //echo $liste['Mail']; ?></p>
                         </div>
                         
                         <div class="message">
