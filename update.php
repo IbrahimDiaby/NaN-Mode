@@ -26,8 +26,12 @@
 
             $id = verify($_GET['ID']);
             $lien = verify($_POST['image']);
-            $req = $db->prepare("UPDATE Articles SET Image = ?, Article = ?, Categories = ?, Prix = ?, Proprietaires = ?, Numero = ?, Ville = ?, Commune = ? WHERE ID = ?");
-            $req->execute(array($lien, verify($_POST['article']), verify($_POST['categories']), verify($_POST['prix']), verify($_POST['admin']), verify($_POST['number']), verify($_POST['ville']), verify($_POST['commune']), $id));
+            $req = $db->prepare("UPDATE Articles SET Article = ?, Categories = ?, Prix = ?, Proprietaires = ?, Numero = ?, Ville = ?, Commune = ? WHERE ID = ?");
+            $req->execute(array(verify($_POST['article']), verify($_POST['categories']), verify($_POST['prix']), verify($_POST['admin']), verify($_POST['number']), verify($_POST['ville']), verify($_POST['commune']), $id));
+
+            // si on decide de mettre une nouvelle image
+            // $req = $db->prepare("UPDATE Articles SET Image = ?, Article = ?, Categories = ?, Prix = ?, Proprietaires = ?, Numero = ?, Ville = ?, Commune = ? WHERE ID = ?");
+            // $req->execute(array($lien, verify($_POST['article']), verify($_POST['categories']), verify($_POST['prix']), verify($_POST['admin']), verify($_POST['number']), verify($_POST['ville']), verify($_POST['commune']), $id));
             header("Location: mesarticles.php?name=$_SESSION[username]");
 
             // $req = $db->prepare("INSERT Articles SET Image = ?, Article = ?, Categories = ?, Prix = ?, Proprietaires = ?, Numero = ?, Ville = ?, Commune = ? WHERE ID = ?");
@@ -226,11 +230,11 @@
                 </label>
                 <br />
 
-                <label for="image">
+                <!-- <label for="image">
                     Nouvel image de l'article :
                     <br />
                     <input type="file" name="image" id="image"  placeholder="Avatar" required />
-                </label>
+                </label> -->
                 <br />
 
                 <input class="btn btn-outline-success" type="submit" value="Enregistrer">
