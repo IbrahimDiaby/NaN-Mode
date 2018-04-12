@@ -51,42 +51,49 @@
 
             <div class="page">
                 <a class="btn btn-danger" id="accueil" href="loginsuccess.php">Accueil</a>
+                
             </div>
             
-            <label for="mailexpediteur">
-
             <?php
                 $db = new PDO("mysql:host=localhost;dbname=Mode", 'root', 'root');
                 $see=$db->query("SELECT * FROM Client WHERE Admin = '$_SESSION[username]' ");
                 $admin = $see->fetch();
                 $adminmail = $admin['Mail'];
                 $adminname = $admin['Admin'];
-            ?>
-                Adresse Mail De @ <p class="btn btn-primary"><?php echo $_SESSION['username']  ?></p> : <br />
-                <!-- disabled -->
-                <input type="email" name="mailexpediteur" id="mailexpediteur" value="<?php echo $adminmail ?>" />
-            </label><br />
 
-            <label for="maildestinateur">
-
-            <?php
-                $db = new PDO("mysql:host=localhost;dbname=Mode", 'root', 'root');
+                // $db = new PDO("mysql:host=localhost;dbname=Mode", 'root', 'root');
                 $search=$db->query("SELECT * FROM Client WHERE Admin = '$proprio' ");
                 $vendeur = $search->fetch();
                 $mail = $vendeur['Mail'];
                 $name = $vendeur['Admin'];
             ?>
-                Adresse Mail De @ <p class="btn btn-success"><?php echo $name ?></p> : <br />
+
+            <label for="">
+                <p>Message de <span class="btn btn-primary"><?php echo $_SESSION['username']  ?></span> à <span class="btn btn-success"><?php echo $name ?></span> </p>
+            </label>
+
+            <label for="mailexpediteur">
+
+                Adresse Mail De @ <p class="btn btn-primary"><?php echo $_SESSION['username']  ?></p> : <br />
                 <!-- disabled -->
-                <input type="email" name="maildestinateur" id="maildestinateur" value="<?php echo $mail ?>"  />
+                <input type="hidden" name="mailexpediteur" id="mailexpediteur" value="<?php echo $adminmail ?>" />
+                <input type="email" name="" id="" value="<?php echo $adminmail ?>" disabled />
+            </label><br />
+
+            <label for="maildestinateur">
+                
+                Adresse Mail De @ <p class="btn btn-success"><?php echo $name ?></p> : <br />
+                <!-- disabled / enabled -->
+                <input type="hidden" name="maildestinateur" id="maildestinateur" value="<?php echo $mail ?>" />
+                <input type="email" name="" id="" value="<?php echo $mail ?>" disabled />
             </label><br />
 
             <!-- <label for="namedestinateur"> -->
-                <input type="hidden" name="namedestinateur" id="namedestinateur" value="<?php echo $name ?>"  />
+                <input type="hidden" name="namedestinateur" id="namedestinateur" value="<?php echo $name ?>" />
             <!-- </label><br /> -->
 
             <!-- <label for="nameexpediteur"> -->
-                <input type="hidden" name="nameexpediteur" id="nameexpediteur" value="<?php echo $adminname ?>"  />
+                <input type="hidden" name="nameexpediteur" id="nameexpediteur" value="<?php echo $adminname ?>" />
             <!-- </label><br /> -->
             
             <!-- cols="30" rows="10" -->

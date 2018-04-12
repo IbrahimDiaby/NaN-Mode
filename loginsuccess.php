@@ -74,7 +74,8 @@
                     <ul>
                       <li><a href="article.php">Tous les articles disponibles</a></li>
                       <li><a href="mesarticles.php?name=<?php echo $_SESSION['username'] ?>">La Liste De Mes Articles <img src="logout.png" alt="" class="logout" title="Logout" /></a></li>
-                      <li><a href="addarticle.php?name=<?php echo $_SESSION['username'] ?>">Ajouter</a></li>
+                      <li><a href="addarticle.php?name=<?php echo $_SESSION['username'] ?>">Ajouter un nouvel article</a></li>
+                      <li><a href="messages.php?name=<?php echo $_SESSION['username'] ?>">Ma Messagerie</a></li>
                       <li>Modifier les paramètres du compte</li>
                     </ul>
                 </li>
