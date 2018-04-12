@@ -1,0 +1,111 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+
+section{
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    height: 1000px;
+    
+}
+
+.contain{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    height: auto;
+    font-weight: bold;
+}
+
+.message{
+    margin: 10px 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    float: right;
+}
+
+.message p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.expediteur{
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+    width: 95%;
+    height: auto;
+    font-weight: bold;
+    background-color: #28a745;
+    color: #fff;
+    text-transform: capitalize;
+    float: left;
+}
+
+.nameexpediteur{
+    margin: 0px;
+    padding: 10px 0px;
+    width: 100%;
+    /* height: 20px; */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#accueil{
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+}
+
+#accueil:hover{
+    width: 100%;
+    background-color: #ffc107;
+    border: 1px solid transparent;
+}
+
+#title{
+    margin: 0px 0px 20px 0px;
+    padding: 10px 0px;
+    width: 100%;
+    height: auto;
+    /* font-size: 30px; */
+    /* font-weight: bold; */
+}
+
+#text_title{
+    margin: 0px;
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#text_subject1{
+    margin: 0px 0px 10px 0px;
+    padding: 10px 0px;
+    width: 49%;
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+}
+
+#text_subject2{
+    margin: 0px 0px 10px 0px;
+    padding: 10px 0px;
+    width: 49%;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+}

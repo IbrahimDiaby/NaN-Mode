@@ -1,0 +1,134 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+/* header */
+
+header{
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    background: #a90329; /* Old browsers */
+    background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 8px 15px rgba(000, 000, 000, 0.5);
+}
+
+#CCI{
+    margin: 0px 10px;
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+#CCILogo{
+    margin: 0px;
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+#CCItext{
+    height: 60px;
+    color: #fff;
+}
+
+#CCItext h3{
+    margin: 15px 0px;
+    width: 150px;
+    display: inline-block;
+    color: #fff;
+}
+
+#searchcontain{
+    height: 60px;
+    width: 80%;
+}
+
+.Inscription{
+    margin: 12px 20px 0px 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* section */
+
+label{
+    display: block;
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+section{
+    margin: 200px auto 0px auto;
+    padding: 0px;
+    width: 45%;
+    height: 500px;
+}
+input[type="text"], input[type="password"]{
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 5px;
+    width: 100%;
+    height: 40px;
+    border-top: 0px solid #000000;
+    border-right: 0px solid #000000;
+    border-bottom: 1px solid #dc3545;
+    border-left: 0px solid #000000;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 20px #000000; */
+    }
+
+input[type="submit"]{
+    height: 40px;
+    width: 100%;
+}
+
+section p{
+    text-align: center;
+}
+
+section > p> a{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #dc3545;
+}
+
+section > p > a:hover{
+    text-decoration: none;
+    color: #dc3545;
+}
+
+/* footer */
+
+footer{
+    margin: 0px;
+    padding: 20px 0px 0px 0px;;
+    width: 100%;
+    height: 60px;
+    background: #a90329; /* Old browsers */
+    background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+
+footer p{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
