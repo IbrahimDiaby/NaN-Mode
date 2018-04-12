@@ -29,7 +29,7 @@
             <?php 
                 while($liste = $req->fetch()){
             ?>
-                <div class="left" >
+                <div class="left">
                     <div class="imgcontain">
                         <img src="" alt="" title="" class="" />
                     </div>
